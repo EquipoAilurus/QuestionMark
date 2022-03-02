@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class CardLogic : MonoBehaviour
 {
-    public TMP_Text tmp;
+    public TMP_Text tmpl;
+    public TMP_Text tmpr;
     public bool isMouseOver = false;
 
     private void OnMouseOver()
@@ -20,11 +21,13 @@ public class CardLogic : MonoBehaviour
 
     public void InduceRight()
     {
-        tmp.text = "¡Si!";
+        tmpr.text = "¡Si!";
+        tmpl.text = "";
     }
 
     public void InduceLeft()
     {
-        tmp.text = "¡No!";
+        tmpl.text = "¡No!";
+        tmpr.text = "";
     }
 }

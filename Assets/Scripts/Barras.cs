@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class Barras : MonoBehaviour
 {
-    public Image barraOtra;
-    public Image barraFiabilidad;
     public Image barraCulpabilidad;
+    public Image barraFiabilidad;
+    public Image barraTension;
     public float longitudActual;
     public float longitudMaxima;
 
@@ -22,9 +22,9 @@ public class Barras : MonoBehaviour
         {
             longitudActual--;
         }
-        barraFiabilidad.fillAmount = longitudActual / longitudMaxima;
-        barraOtra.fillAmount = (longitudActual / longitudMaxima) / 3;
-        barraCulpabilidad.fillAmount = (longitudActual / longitudMaxima) / 2;
+        barraCulpabilidad.fillAmount = longitudActual / longitudMaxima;
+        barraFiabilidad.fillAmount = (longitudActual / longitudMaxima) / 3;
+        barraTension.fillAmount = (longitudActual / longitudMaxima) / 2;
 
     }
 }

@@ -152,11 +152,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f96d0b6bf9107c64898799143bc25286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  barraFiabilidad: {fileID: 558630567}
-  barraOtra: {fileID: 663919243}
   barraCulpabilidad: {fileID: 2114329042}
-  longitudActual: 50
-  longitudMaxima: 100
+  barraFiabilidad: {fileID: 558630567}
+  barraTension: {fileID: 663919243}
+  longitudActual: 500
+  longitudMaxima: 1000
 --- !u!4 &85392400
 Transform:
   m_ObjectHideFlags: 0
@@ -384,6 +384,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1493709293}
     m_Modifications:
+    - target: {fileID: 5842621391360162231, guid: 0a9ef1ee4e94710409b192016d2fe154, type: 3}
+      propertyPath: m_Text
+      value: "TENSI\xD3N"
+      objectReference: {fileID: 0}
     - target: {fileID: 5842621392365464534, guid: 0a9ef1ee4e94710409b192016d2fe154, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -454,7 +458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5842621392365464534, guid: 0a9ef1ee4e94710409b192016d2fe154, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 100
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 5842621392365464534, guid: 0a9ef1ee4e94710409b192016d2fe154, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -470,7 +474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5842621392365464535, guid: 0a9ef1ee4e94710409b192016d2fe154, type: 3}
       propertyPath: m_Name
-      value: Barra Otra
+      value: "Barra Tensi\xF3n"
       objectReference: {fileID: 0}
     - target: {fileID: 5842621392440973686, guid: 0a9ef1ee4e94710409b192016d2fe154, type: 3}
       propertyPath: m_Sprite
@@ -753,7 +757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6789183724829967523, guid: 738369c1f6800664a99bd1dd3c4e7c5e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -100
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6789183724829967523, guid: 738369c1f6800664a99bd1dd3c4e7c5e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
