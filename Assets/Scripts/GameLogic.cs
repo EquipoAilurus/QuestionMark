@@ -8,7 +8,7 @@ public class GameLogic : MonoBehaviour
     public GameObject card;
     public CardLogic cl;
     SpriteRenderer sr;
-    public float fMovingSpeed = 0.05f;
+    public float fMovingSpeed;
     public TMP_Text preguntas;
     public int pregunta = 0;
 
@@ -29,7 +29,7 @@ public class GameLogic : MonoBehaviour
         }
         else
         {
-            card.transform.position = Vector2.MoveTowards(card.transform.position, new Vector2(0,0), fMovingSpeed);
+            card.transform.position = Vector2.MoveTowards(card.transform.position, new Vector2(0,0), fMovingSpeed*Time.deltaTime);
         }
         if(card.transform.position.x > 2)
         {
