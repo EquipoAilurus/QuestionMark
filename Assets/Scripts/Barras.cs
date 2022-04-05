@@ -8,17 +8,18 @@ public class Barras : MonoBehaviour
     public Image barra;
     public float longitudActual;
     public float longitudMaxima;
+    public bool cambioBarras;
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("right"))
+        GameLogic variable = GetComponent<GameLogic>();
+        cambioBarras = variable.cambio;
+
+        if (cambioBarras == true)
         {
-            longitudActual += Random.Range(10,200);
-        }
-        if (Input.GetKeyDown("left"))
-        {
-            longitudActual -= Random.Range(10, 200);
+            longitudActual += Random.Range(-200,200);
+            cambio = false;
         }
         if (longitudActual >longitudMaxima)
         {

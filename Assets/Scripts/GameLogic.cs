@@ -11,6 +11,7 @@ public class GameLogic : MonoBehaviour
     public float fMovingSpeed;
     public TMP_Text preguntas;
     public int pregunta = 0;
+    public bool cambio = false;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,7 @@ public class GameLogic : MonoBehaviour
         }
         else
         {
-            card.transform.position = Vector2.MoveTowards(card.transform.position, new Vector2(0,0), fMovingSpeed*Time.deltaTime);
+            card.transform.position = Vector2.MoveTowards(card.transform.position, new Vector2(0, 0), fMovingSpeed*Time.deltaTime);
         }
         if(card.transform.position.x > 2)
         {
@@ -37,6 +38,7 @@ public class GameLogic : MonoBehaviour
             if (!Input.GetMouseButton(0))
             {
                 cl.InduceRight();
+                cambio = true;
             }
         }
         else if(card.transform.position.x < -2)
@@ -45,6 +47,7 @@ public class GameLogic : MonoBehaviour
             if (!Input.GetMouseButton(0))
             {
                 cl.InduceLeft();
+                cambio = false;
             }
         }
         else
