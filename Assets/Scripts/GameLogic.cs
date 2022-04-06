@@ -2,28 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-//using UnityEngine UI;
 
 public class GameLogic : MonoBehaviour
 {
+    // VARIABLES GLOBALES
     public GameObject card;
     public CardLogic cl;
+
+    // VARIABLES LOCALES
     SpriteRenderer sr;
+
     public float fMovingSpeed;
+
     public TMP_Text preguntas;
+
     public int pregunta = 0;
     public bool soltado = true;
-    //public Image imagenUI;
 
-    // Start is called before the first frame update
+    public SpriteRenderer spriteActual;
+    public Sprite cientifico;
+    public Sprite cura;
+    public Sprite detective;
+
+    // START
     void Start()
     {
-        //imagenUI = GameObject.Find("Detective").GetComponent<Image>();
         sr = card.GetComponent<SpriteRenderer>();
         soltado = true;
     }
 
-    // Update is called once per frame
+    // UPDATE
     void Update()
     {
         if (Input.GetMouseButton(0) && cl.isMouseOver)
@@ -35,6 +43,7 @@ public class GameLogic : MonoBehaviour
         {
             card.transform.position = Vector2.MoveTowards(card.transform.position, new Vector2(0, 0), fMovingSpeed*Time.deltaTime);
         }
+
         if (card.transform.position.x > 2)
         {
             sr.color = Color.green;
@@ -58,15 +67,10 @@ public class GameLogic : MonoBehaviour
             sr.color = Color.white;
         }
 
-        //if(pregunta == 10)
-        //{
-            //imageUI.sprite = Resources.Load<Sprite>("Sprites/Cientifico");
-        //}
-
         if (soltado == true)
         {
-            if (pregunta == 0)
-            {//Detective
+            if (pregunta == 0) //Detective
+            {
                 preguntas.text = "¿Conocías a la víctima?";
                 soltado = false;
                 pregunta++;
@@ -101,28 +105,24 @@ public class GameLogic : MonoBehaviour
                 pregunta++;
                 soltado = false;
             }
-
             else if (pregunta == 6)
             {
                 preguntas.text = "¿Tienes antecedentes?";
                 soltado = false;
                 pregunta++;
             }
-
             else if (pregunta == 7)
             {
                 preguntas.text = "¿Te sorprende ser sospechoso?";
                 soltado = false;
                 pregunta++;
             }
-
             else if (pregunta == 8)
             {
                 preguntas.text = "¿Estás nervioso?";
                 soltado = false;
                 pregunta++;
             }
-
             else if (pregunta == 9)
             {
                 preguntas.text = "¿Tienes licencia de armas?";
@@ -130,28 +130,29 @@ public class GameLogic : MonoBehaviour
                 pregunta++;
             }
 
-            else if (pregunta == 10)
-            {//Científico
+            else if (pregunta == 10) //Científico
+            {
+                CambioCientifico();
                 preguntas.text = "¿Te someterías al suero de la verdad?";
                 soltado = false;
                 pregunta++;
             }
-
             else if (pregunta == 11)
             {
                 preguntas.text = "¿Eres conscinete de que se ha encontrado tu ADN en la escena del crimen?";
                 soltado = false;
                 pregunta++;
             }
-
             else if (pregunta == 12)
             {
                 preguntas.text = "¿Sueles consumir estupefacientes?";
                 soltado = false;
                 pregunta++;
             }
-            else if (pregunta == 13)
-            {//Cura
+
+            else if (pregunta == 13) //Cura
+            {
+                CambioCura();
                 preguntas.text = "¿Aceptas la palabra de Dios?";
                 soltado = false;
                 pregunta++;
@@ -199,5 +200,20 @@ public class GameLogic : MonoBehaviour
                 pregunta++;
             }
         }
+    }
+
+    void CambioDetective()
+    {
+        spriteActual.sprite = detective;
+    }
+
+    void CambioCientifico()
+    {
+        spriteActual.sprite = cientifico;
+    }
+
+    void CambioCura()
+    {
+        spriteActual.sprite = cura;
     }
 }

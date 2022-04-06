@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 188875383}
   - component: {fileID: 188875382}
   m_Layer: 5
-  m_Name: Barras
+  m_Name: Canvas Barras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -692,6 +692,10 @@ MonoBehaviour:
   preguntas: {fileID: 218930366}
   pregunta: 0
   soltado: 0
+  spriteActual: {fileID: 1286383917}
+  cientifico: {fileID: 21300000, guid: cf0bf4c6f5cee884db75e80866d74d74, type: 3}
+  cura: {fileID: 21300000, guid: 5b63c50b44fa54f458a6dd5aec085bdf, type: 3}
+  detective: {fileID: 21300000, guid: f118def0bea1c97429fab6ff95ad92d4, type: 3}
 --- !u!4 &675436253
 Transform:
   m_ObjectHideFlags: 0
@@ -1210,7 +1214,7 @@ GameObject:
   - component: {fileID: 1407676858}
   - component: {fileID: 1407676857}
   m_Layer: 5
-  m_Name: Preguntas
+  m_Name: Canvas Preguntas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
