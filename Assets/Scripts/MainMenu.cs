@@ -22,9 +22,9 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Cartas");
     }
 
-    public void Barras()
+    public void Ayuda()
     {
-        SceneManager.LoadScene("Barras");
+        SceneManager.LoadScene("Ayuda");
     }
         
     public void Opciones()

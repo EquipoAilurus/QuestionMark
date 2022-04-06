@@ -8,18 +8,16 @@ public class Barras : MonoBehaviour
     public Image barra;
     public float longitudActual;
     public float longitudMaxima;
-    public bool cambioBarras;
+    public GameLogic gl;
+    public int valor;
 
-    // Update is called once per frame
     void Update()
     {
-        GameLogic variable = GetComponent<GameLogic>();
-        cambioBarras = variable.cambio;
-
-        if (cambioBarras == true)
+        Debug.Log(gl.pregunta);
+        if (valor != gl.pregunta)
         {
             longitudActual += Random.Range(-200,200);
-            cambio = false;
+            valor = gl.pregunta;
         }
         if (longitudActual >longitudMaxima)
         {
