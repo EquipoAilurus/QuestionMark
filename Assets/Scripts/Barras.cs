@@ -13,12 +13,17 @@ public class Barras : MonoBehaviour
 
     void Update()
     {
-        if (valor != gl.pregunta)
+        
+        if(gl.pregunta == 1)
+        {
+            longitudActual = 500;
+        }
+        else if (valor != gl.pregunta)
         {
             longitudActual += Random.Range(-200,200);
             valor = gl.pregunta;
         }
-
+        
         if (longitudActual >longitudMaxima)
         {
             longitudActual = 1000;

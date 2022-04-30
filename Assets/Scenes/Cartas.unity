@@ -552,14 +552,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 636652328}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f96d0b6bf9107c64898799143bc25286, type: 3}
+  m_Script: {fileID: 11500000, guid: 3cf718e16dc9ab84dbcc211df2ad09ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   barra: {fileID: 2059206247}
-  longitudActual: 500
-  longitudMaxima: 1000
-  gl: {fileID: 675436252}
-  valor: -1
+  longitudActual: 60
+  longitudMaxima: 60
 --- !u!4 &636652330
 Transform:
   m_ObjectHideFlags: 0
@@ -688,6 +686,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   card: {fileID: 1286383916}
   cl: {fileID: 1286383919}
+  t: {fileID: 636652329}
   fMovingSpeed: 20
   preguntas: {fileID: 218930366}
   pregunta: 0
@@ -946,7 +945,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5842621391360162231, guid: 0a9ef1ee4e94710409b192016d2fe154, type: 3}
       propertyPath: m_Text
-      value: "TENSI\xD3N"
+      value: CULPABILIDAD
       objectReference: {fileID: 0}
     - target: {fileID: 5842621391798574040, guid: 0a9ef1ee4e94710409b192016d2fe154, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1050,7 +1049,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5842621392365464535, guid: 0a9ef1ee4e94710409b192016d2fe154, type: 3}
       propertyPath: m_Name
-      value: "Barra Tensi\xF3n"
+      value: Barra Culpabilidad
       objectReference: {fileID: 0}
     - target: {fileID: 5842621392440973686, guid: 0a9ef1ee4e94710409b192016d2fe154, type: 3}
       propertyPath: m_Sprite
@@ -1408,11 +1407,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6789183724829967524, guid: 738369c1f6800664a99bd1dd3c4e7c5e, type: 3}
       propertyPath: m_Name
-      value: Barra Culpabilidad
+      value: "Barra Tensi\xF3n"
       objectReference: {fileID: 0}
     - target: {fileID: 6789183725541942263, guid: 738369c1f6800664a99bd1dd3c4e7c5e, type: 3}
       propertyPath: m_SizeDelta.x
       value: 650
+      objectReference: {fileID: 0}
+    - target: {fileID: 6789183726366572735, guid: 738369c1f6800664a99bd1dd3c4e7c5e, type: 3}
+      propertyPath: m_Text
+      value: "TENSI\xD3N"
       objectReference: {fileID: 0}
     - target: {fileID: 6789183726457554417, guid: 738369c1f6800664a99bd1dd3c4e7c5e, type: 3}
       propertyPath: m_Sprite
