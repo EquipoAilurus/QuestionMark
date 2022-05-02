@@ -24,4 +24,14 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
+
+    public void Perder()
+    {
+        SceneManager.LoadScene("Perder");
+    }
+
+    public void Ganar()
+    {
+        SceneManager.LoadScene("Ganar");
+    }
 }

@@ -49,20 +49,20 @@ public class GameLogic : MonoBehaviour
 
         if (card.transform.position.x > 2)
         {
+            cl.InduceRight();
             sr.color = Color.green;
             if (Input.GetMouseButtonUp(0))
             {
                 soltado = true;
-                cl.InduceRight();
             }
         }
         else if (card.transform.position.x < -2)
         {
+            cl.InduceLeft();
             sr.color = Color.red;
             if (Input.GetMouseButtonUp(0))
             {
                 soltado = true;
-                cl.InduceLeft();
             }
         }
         else
@@ -220,6 +220,13 @@ public class GameLogic : MonoBehaviour
             {
                 t.longitudActual = 60;
                 preguntas.text = "¿Alguna vez dudaste?";
+                soltado = false;
+                pregunta++;
+            }
+            else if (pregunta == 21)
+            {
+                t.longitudActual = 60;
+                preguntas.text = "Coco https://youtu.be/mCdA4bJAGGk"; 
                 soltado = false;
                 pregunta++;
             }

@@ -9,29 +9,40 @@ public class Barras : MonoBehaviour
     public float longitudActual;
     public float longitudMaxima;
     public GameLogic gl;
+    public CardLogic cl;
+    public MainMenu mm;
     public int valor;
 
     void Update()
     {
         
+        if(gl.pregunta > 21 && longitudActual >= 750)
+        {
+            mm.Ganar();
+        }
+        else if(gl.pregunta > 21)
+        {
+            mm.Perder();
+        }
+
         if(gl.pregunta == 1)
         {
             longitudActual = 500;
         }
         else if (valor != gl.pregunta)
         {
-            longitudActual += Random.Range(-200,200);
+            longitudActual += (cl.vc * (cl.vf / 100)) + cl.vc;
             valor = gl.pregunta;
         }
-        
-        if (longitudActual >longitudMaxima)
+
+        if (longitudActual >= 1000)
         {
-            longitudActual = 1000;
+            mm.Ganar();
         }
 
-        if (longitudActual < 0)
+        if (longitudActual <= 0)
         {
-            longitudActual = 0;
+            mm.Perder();
         }
 
         barra.fillAmount = longitudActual / longitudMaxima;

@@ -8,14 +8,22 @@ public class Tension : MonoBehaviour
     public Image barra;
     public float longitudActual;
     public float longitudMaxima;
+    public MainMenu mm;
+    public CambiarDificultad cd;
+    public int aux;
+    
+    void Start()
+    {
+        aux = cd.LoadData();
+    }
 
     void Update()
     {
         barra.fillAmount = longitudActual / longitudMaxima;
-        longitudActual -= 3*Time.deltaTime;
-        if (longitudActual<=0)
+        longitudActual -= aux * Time.deltaTime;
+        if (longitudActual <= 0)
         {
-            Debug.Log("PERDISTE putito");
+            mm.Perder();
         }
     }
 }
