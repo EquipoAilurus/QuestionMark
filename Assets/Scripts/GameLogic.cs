@@ -9,6 +9,8 @@ public class GameLogic : MonoBehaviour
     public GameObject card;
     public CardLogic cl;
     public Tension t;
+    public Fiabilidad f;
+    public Sonido s;
 
     // VARIABLES LOCALES
     SpriteRenderer sr;
@@ -24,8 +26,12 @@ public class GameLogic : MonoBehaviour
     public Sprite cientifico;
     public Sprite cura;
     public Sprite detective;
+    public Sprite cientificofia;
+    public Sprite curafia;
+    public Sprite detectivefia;
 
-    
+
+
 
     // START
     void Start()
@@ -37,6 +43,9 @@ public class GameLogic : MonoBehaviour
     // UPDATE
     void Update()
     {
+        DetectiveFia();
+        CientificoFia();
+        CuraFia();
         if (Input.GetMouseButton(0) && cl.isMouseOver)
         {
             Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -53,6 +62,7 @@ public class GameLogic : MonoBehaviour
             sr.color = Color.green;
             if (Input.GetMouseButtonUp(0))
             {
+                s.Carta();
                 soltado = true;
             }
         }
@@ -62,6 +72,7 @@ public class GameLogic : MonoBehaviour
             sr.color = Color.red;
             if (Input.GetMouseButtonUp(0))
             {
+                s.Carta();
                 soltado = true;
             }
         }
@@ -246,5 +257,41 @@ public class GameLogic : MonoBehaviour
     void CambioCura()
     {
         spriteActual.sprite = cura;
+    }
+
+    void DetectiveFia()
+    {
+        if (pregunta < 10 && f.longitudActual < 50)
+        {
+            spriteActual.sprite = detectivefia;
+        }
+        else if (pregunta < 10 && f.longitudActual >= 50)
+        {
+            spriteActual.sprite = detective;
+        }
+    }
+
+    void CientificoFia()
+    {
+        if (pregunta >= 10 && pregunta < 13 && f.longitudActual < 50)
+        {
+            spriteActual.sprite = cientificofia;
+        }
+        else if (pregunta >= 10 && pregunta < 13 && f.longitudActual >= 50)
+        {
+            spriteActual.sprite = cientifico;
+        }
+    }
+
+    void CuraFia()
+    {
+        if (pregunta >= 13 && f.longitudActual < 50)
+        {
+            spriteActual.sprite = curafia;
+        } 
+        else if (pregunta >= 13 && f.longitudActual >= 50)
+        {
+            spriteActual.sprite = cura;
+        }
     }
 }

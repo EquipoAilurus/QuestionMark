@@ -12,7 +12,7 @@ public class CambiarDificultad : MonoBehaviour
 
     void Start()
     {
-        List<string> opciones = new List<string>() { "Inocente", "Con Antecedentes", "Hitler" };
+        List<string> opciones = new List<string>() {"Inocente", "Con Antecedentes", "Hitler" };
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
         if (currentScene.name == "Opciones")
