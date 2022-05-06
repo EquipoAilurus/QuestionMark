@@ -12,7 +12,7 @@ public class CambiarDificultad : MonoBehaviour
 
     void Start()
     {
-        List<string> opciones = new List<string>() {"Inocente", "Con Antecedentes", "Hitler" };
+        List<string> opciones = new List<string>() {"Inocente", "Antecedentes", "Delincuente" };
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
         if (currentScene.name == "Opciones")
@@ -27,11 +27,11 @@ public class CambiarDificultad : MonoBehaviour
         {
             dificultad = 1;
         }
-        else if (this.Dropdown.captionText.text == "Con Antecedentes")
+        else if (this.Dropdown.captionText.text == "Antecedentes")
         {
             dificultad = 2;
         }
-        else if (this.Dropdown.captionText.text == "Hitler")
+        else if (this.Dropdown.captionText.text == "Delincuente")
         {
             dificultad = 6;
         }

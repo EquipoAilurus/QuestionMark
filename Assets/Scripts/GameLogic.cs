@@ -93,7 +93,7 @@ public class GameLogic : MonoBehaviour
             else if (pregunta == 1)
             {
                 t.longitudActual = 60;
-                preguntas.text = "¿Hay algún conocido común?";
+                preguntas.text = "¿Hay algún conocido común entre la víctima y usted?";
                 pregunta++;
                 soltado = false;
             }
@@ -154,87 +154,206 @@ public class GameLogic : MonoBehaviour
                 pregunta++;
             }
 
-            else if (pregunta == 10) //Científico
+            else if (pregunta == 10)
             {
                 t.longitudActual = 60;
-                CambioCientifico();
-                preguntas.text = "¿Te someterías al suero de la verdad?";
+                preguntas.text = "¿Tomas estupefacientes?";
                 soltado = false;
                 pregunta++;
             }
             else if (pregunta == 11)
             {
                 t.longitudActual = 60;
-                preguntas.text = "¿Eres conscinete de que se ha encontrado tu ADN en la escena del crimen?";
+                preguntas.text = "¿Eres consciente de que muchos testigos te vieron cerca del escenario del crimen?";
                 soltado = false;
                 pregunta++;
             }
             else if (pregunta == 12)
             {
                 t.longitudActual = 60;
-                preguntas.text = "¿Sueles consumir estupefacientes?";
+                preguntas.text = "¿Te consideras una persona sociable?";
                 soltado = false;
                 pregunta++;
             }
 
-            else if (pregunta == 13) //Cura
+            else if (pregunta == 13)
             {
                 t.longitudActual = 60;
-                CambioCura();
-                preguntas.text = "¿Aceptas la palabra de Dios?";
+                preguntas.text = "¿Eres el asesino?";
                 soltado = false;
                 pregunta++;
             }
             else if (pregunta == 14)
             {
                 t.longitudActual = 60;
-                preguntas.text = "¿Te arrepientes de tus pecados?";
+                preguntas.text = "¿Presentas un abogado?";
                 soltado = false;
                 pregunta++;
             }
-            else if (pregunta == 15)
+            else if (pregunta == 15)//Cura
             {
+                CambioCura();
                 t.longitudActual = 60;
-                preguntas.text = "¿Vas los domingos a misa?";
+                preguntas.text = "¿Aceptas la palabra de Dios?";
                 soltado = false;
                 pregunta++;
             }
             else if (pregunta == 16)
             {
                 t.longitudActual = 60;
-                preguntas.text = "¿Sueles rezar?";
+                preguntas.text = "¿Te arrepientes de tus pecados?";
                 soltado = false;
                 pregunta++;
             }
             else if (pregunta == 17)
             {
                 t.longitudActual = 60;
-                preguntas.text = "¿Has leído la biblia?";
+                preguntas.text = "¿Vas los domingos a misa?";
                 soltado = false;
                 pregunta++;
             }
             else if (pregunta == 18)
             {
                 t.longitudActual = 60;
-                preguntas.text = "¿Consideras que tus pecados son perdonables?";
+                preguntas.text = "¿Sueles rezar?";
                 soltado = false;
                 pregunta++;
             }
             else if (pregunta == 19)
             {
                 t.longitudActual = 60;
-                preguntas.text = "Hijo, ¿te confesarás conmigo?";
+                preguntas.text = "¿Has leído la biblia?";
                 soltado = false;
                 pregunta++;
             }
             else if (pregunta == 20)
             {
                 t.longitudActual = 60;
-                preguntas.text = "¿Alguna vez dudaste?";
+                preguntas.text = "¿Consideras que tus pecados son perdonables?";
                 soltado = false;
                 pregunta++;
             }
             else if (pregunta == 21)
+            {
+                t.longitudActual = 60;
+                preguntas.text = "Hijo, ¿te confesarás conmigo?";
+                soltado = false;
+                pregunta++;
+            }
+            else if (pregunta == 22)
+            {
+                t.longitudActual = 60;
+                preguntas.text = "¿Alguna vez dudaste de la palabra de cristo?";
+                soltado = false;
+                pregunta++;
+            }
+            else if (pregunta == 23)
+            {
+                t.longitudActual = 60;
+                preguntas.text = "¡Oh, acepta tus pecados y ve con cristo!";
+                soltado = false;
+                pregunta++;
+            }
+            else if (pregunta == 24)
+            {
+                t.longitudActual = 60;
+                preguntas.text = "Padre nuestro...";
+                soltado = false;
+                pregunta++;
+            }
+            else if (pregunta == 25)
+            {
+                t.longitudActual = 60;
+                preguntas.text = "Hijo, Dios perdona todo, dime, eres culpable?";
+                soltado = false;
+                pregunta++;
+            }
+            else if (pregunta == 26)
+            {
+                t.longitudActual = 60;
+                preguntas.text = "¿Consideras que tus pecados son perdonables?";
+                soltado = false;
+                pregunta++;
+            }
+            else if (pregunta == 27)
+            {
+                t.longitudActual = 60;
+                preguntas.text = "¿2 + 4?";
+                soltado = false;
+                pregunta++;
+            }
+            else if (pregunta == 28)//Científico
+            {
+                CambioCientifico();
+                t.longitudActual = 60;
+                preguntas.text = "¿Te someterías al suero de la verdad?";
+                soltado = false;
+                pregunta++;
+            }
+            else if (pregunta == 29)
+            {
+                t.longitudActual = 60;
+                preguntas.text = "¿Eres conscinete de que se ha encontrado tu ADN en la escena del crimen?";
+                soltado = false;
+                pregunta++;
+            }
+            else if (pregunta == 30)
+            {
+                t.longitudActual = 60;
+                preguntas.text = "¿Darías positivo en un test de drogas?";
+                soltado = false;
+                pregunta++;
+            }
+            else if (pregunta == 31)
+            {
+                t.longitudActual = 60;
+                preguntas.text = "Según estos papeles, aún estás bajo los efectos de diversas drogas.";
+                soltado = false;
+                pregunta++;
+            }
+            else if (pregunta == 32)
+            {
+                t.longitudActual = 60;
+                preguntas.text = "¿Eres propenso a degustar carnes rojas?";
+                soltado = false;
+                pregunta++;
+            }
+            else if (pregunta == 33)
+            {
+                t.longitudActual = 60;
+                preguntas.text = "Recapitulando, según la parte de la primera parte correlacionada con la parte tercera, entonces, ¿si?";
+                soltado = false;
+                pregunta++;
+            }
+            else if (pregunta == 34)
+            {
+                t.longitudActual = 60;
+                preguntas.text = "Las leyes federales me indican que afirme que el consumo de cualquier sustancia psicotrópica está prohibido durante el interrogatorio.";
+                soltado = false;
+                pregunta++;
+            }
+            else if (pregunta == 35)
+            {
+                t.longitudActual = 60;
+                preguntas.text = "¿De pequeño solias dañar animales?";
+                soltado = false;
+                pregunta++;
+            }
+            else if (pregunta == 36)
+            {
+                t.longitudActual = 60;
+                preguntas.text = "¿Prefieres el color rojo o el azul?";
+                soltado = false;
+                pregunta++;
+            }
+            else if (pregunta == 37)
+            {
+                t.longitudActual = 60;
+                preguntas.text = "¿Sueles tener un horario específico?";
+                soltado = false;
+                pregunta++;
+            }
+            else if (pregunta == 38)
             {
                 t.longitudActual = 60;
                 preguntas.text = "Coco https://youtu.be/mCdA4bJAGGk"; 
@@ -249,49 +368,49 @@ public class GameLogic : MonoBehaviour
         spriteActual.sprite = detective;
     }
 
-    void CambioCientifico()
-    {
-        spriteActual.sprite = cientifico;
-    }
-
     void CambioCura()
     {
         spriteActual.sprite = cura;
     }
 
+    void CambioCientifico()
+    {
+        spriteActual.sprite = cientifico;
+    }
+
     void DetectiveFia()
     {
-        if (pregunta < 10 && f.longitudActual < 50)
+        if (pregunta < 15 && f.longitudActual < 50)
         {
             spriteActual.sprite = detectivefia;
         }
-        else if (pregunta < 10 && f.longitudActual >= 50)
+        else if (pregunta < 15 && f.longitudActual >= 50)
         {
             spriteActual.sprite = detective;
         }
     }
 
-    void CientificoFia()
+    void CuraFia()
     {
-        if (pregunta >= 10 && pregunta < 13 && f.longitudActual < 50)
+        if (pregunta >= 15 && pregunta < 28 && f.longitudActual < 50)
         {
-            spriteActual.sprite = cientificofia;
+            spriteActual.sprite = curafia;
         }
-        else if (pregunta >= 10 && pregunta < 13 && f.longitudActual >= 50)
+        else if (pregunta >= 15 && pregunta < 28 && f.longitudActual >= 50)
         {
-            spriteActual.sprite = cientifico;
+            spriteActual.sprite = cura;
         }
     }
 
-    void CuraFia()
+    void CientificoFia()
     {
-        if (pregunta >= 13 && f.longitudActual < 50)
+        if (pregunta >= 28 && f.longitudActual < 50)
         {
-            spriteActual.sprite = curafia;
+            spriteActual.sprite = cientificofia;
         } 
-        else if (pregunta >= 13 && f.longitudActual >= 50)
+        else if (pregunta >= 28 && f.longitudActual >= 50)
         {
-            spriteActual.sprite = cura;
+            spriteActual.sprite = cientifico;
         }
     }
 }

@@ -10,6 +10,7 @@ public class Barras : MonoBehaviour
     public float longitudMaxima;
     public GameLogic gl;
     public CardLogic cl;
+    public Fiabilidad f;
     public MainMenu mm;
     public int valor;
 
@@ -31,7 +32,7 @@ public class Barras : MonoBehaviour
         }
         else if (valor != gl.pregunta)
         {
-            longitudActual += (cl.vc * (cl.vf / 100)) + cl.vc;
+            longitudActual -= (cl.vc * (f.longitudActual / 100)) + cl.vc;
             valor = gl.pregunta;
         }
 
